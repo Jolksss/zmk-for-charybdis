@@ -14,23 +14,23 @@
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <10 11>;
+            key-positions = <8 9>;
             layers = <0>;
         };
 
         plus {
             bindings = <&kp EQUAL>;
-            key-positions = <22 23>;
+            key-positions = <10 11>;
         };
 
         left_bracket {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <32 33>;
+            key-positions = <20 21>;
         };
 
         right_bracket {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <34 35>;
+            key-positions = <22 23>;
         };
 
         grave {
@@ -40,6 +40,11 @@
 
         backsplash {
             bindings = <&kp BACKSLASH>;
+            key-positions = <34 35>;
+        };
+
+        delete {
+            bindings = <&kp DELETE>;
             key-positions = <46 47>;
         };
     };
@@ -50,9 +55,9 @@
         Base {
             bindings = <
 &kp TAB         &kp N1  &kp N2  &kp N3     &kp N4        &kp N5       &kp N6       &kp N7     &kp N8     &kp N9   &kp N0     &kp PAGE_UP
-&kp CAPSLOCK    &kp Q   &kp W   &kp E      &kp R         &kp T        &kp Y        &kp U      &kp I      &kp O    &kp P      &kp PAGE_DOWN
+&kp CAPSLOCK    &kp Q   &kp W   &kp E      &kp R         &kp T        &kp Y        &kp U      &kp I      &kp O    &kp P      &mt RIGHT_WIN PAGE_DOWN
 &kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F         &kp G        &kp H        &kp J      &kp K      &kp L    &kp SEMI   &kp APOS
-&kp LCTRL       &kp Z   &kp X   &kp C      &kp V         &lt 2 B      &lt 2 N      &kp M      &kp COMMA  &kp DOT  &kp SLASH  &mt RIGHT_WIN BACKSPACE
+&kp LCTRL       &kp Z   &kp X   &kp C      &kp V         &lt 2 B      &lt 2 N      &kp M      &kp COMMA  &kp DOT  &kp SLASH  &kp BACKSPACE
                                 &kp SPACE  &lt 1 ENTER   &mkp LCLK    &lt 1 ENTER  &kp SPACE
                                            &kp LEFT_ALT  &mkp RCLK    &mkp LCLK
             >;
