@@ -115,8 +115,8 @@
 &kp CAPSLOCK    &kp Q   &kp W   &kp E      &kp R         &kp T        &kp Y      &kp U        &kp I      &kp O    &kp P      &mt RIGHT_WIN DELETE
 &kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F         &kp G        &kp H      &kp J        &kp K      &kp L    &kp SEMI   &kp APOS
 &kp LCTRL       &kp Z   &kp X   &kp C      &kp V         &kp B        &kp N      &kp M        &kp COMMA  &kp DOT  &kp SLASH  &mt RIGHT_SHIFT ENTER
-                                &kp SPACE  &mo 1         &mkp LCLK    &mo 2      &lt 3 SPACE
-                                           &kp LEFT_ALT  &mkp RCLK    &kp ENTER
+                                &kp SPACE  &lt 1 LCTRL   &mkp LCLK    &kp ENTER  &lt 3 SPACE
+                                           &kp LEFT_ALT  &mkp RCLK    &mo 2
             >;
 
             trackball-bindings = <&tmv_coarse>;
@@ -135,21 +135,21 @@
 
         Arrow {
             bindings = <
-&trans  &trans  &trans  &trans    &trans    &trans       &trans        &trans        &trans         &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &kp UP    &trans       &trans        &kp LS(UP)    &trans         &trans  &trans  &trans
-&trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT    &kp LS(LEFT)  &kp LS(DOWN)  &kp LS(RIGHT)  &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans    &trans       &kp PG_UP     &kp PG_DN     &trans         &trans  &trans  &trans
-                        &trans    &trans    &trans       &trans        &trans
-                                  &trans    &trans       &trans
+&trans  &trans  &trans    &trans    &trans     &trans    &trans   &trans    &trans     &trans  &trans  &trans
+&trans  &trans  &trans    &kp UP    &trans     &trans    &trans   &trans    &trans     &trans  &trans  &trans
+&trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &trans   &kp HOME  &kp PG_UP  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans     &trans    &kp DEL  &kp END   &kp PG_DN  &trans  &trans  &trans
+                          &trans    &trans     &trans    &trans   &trans
+                                    &trans     &trans    &trans
             >;
         };
 
-        mouth {
+        Mouth {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans
                                 &trans  &trans    &trans
             >;
