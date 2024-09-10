@@ -35,7 +35,7 @@
 
         grave {
             bindings = <&kp GRAVE>;
-            key-positions = <0 1>;
+            key-positions = <1 2>;
         };
 
         backsplash {
@@ -62,6 +62,48 @@
             bindings = <&kp DOWN>;
             key-positions = <45 46>;
         };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+        };
+    };
+
+    macros {
+        psw: psw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N &kp M &kp COMMA &kp N &kp M &kp COMMA &kp N1 &kp N1 &kp RET>;
+            label = "PSW";
+        };
+
+        gigaemail: gigaemail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp L &kp I &kp U &kp Z &kp I &kp J &kp I &kp N &kp G &kp AT &kp G &kp I &kp G &kp A &kp C &kp L &kp O &kp U &kp D &kp T &kp E &kp C &kp H &kp DOT &kp C &kp O &kp M>;
+            label = "GIGAEMAIL";
+        };
+
+        gmail: gmail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp Z &kp I &kp J &kp I &kp N &kp G &kp L &kp I &kp U &kp N2 &kp N3 &kp N3 &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "GMAIL";
+        };
+
+        yyz: yyz {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp T &kp R &kp A &kp N &kp S &kp L &kp A &kp T &kp E &kp SPACE &kp T &kp O &kp SPACE &kp C &kp H &kp I &kp N &kp E &kp S &kp E &kp COLON>;
+            label = "YYZ";
+        };
+
+        zyy: zyy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp T &kp R &kp A &kp N &kp S &kp L &kp A &kp T &kp E &kp SPACE &kp T &kp O &kp SPACE &kp E &kp N &kp G &kp L &kp I &kp S &kp H &kp COLON>;
+            label = "ZYY";
+        };
     };
 
     keymap {
@@ -69,12 +111,12 @@
 
         Base {
             bindings = <
-&kp TAB         &kp N1  &kp N2  &kp N3     &kp N4        &kp N5       &kp N6     &kp N7     &kp N8     &kp N9   &kp N0     &kp BACKSPACE
-&kp CAPSLOCK    &kp Q   &kp W   &kp E      &kp R         &kp T        &kp Y      &kp U      &kp I      &kp O    &kp P      &mt RIGHT_WIN DELETE
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F         &kp G        &kp H      &kp J      &kp K      &kp L    &kp SEMI   &kp APOS
-&kp LCTRL       &kp Z   &kp X   &kp C      &kp V         &kp B        &kp N      &kp M      &kp COMMA  &kp DOT  &kp SLASH  &mt RIGHT_SHIFT ENTER
-                                &kp SPACE  &mo 1         &mkp LCLK    &mo 2      &kp SPACE
-                                           &kp LEFT_ALT  &mkp RCLK    &mkp LCLK
+&kp TAB         &kp N1  &kp N2  &kp N3     &kp N4        &kp N5       &kp N6     &kp N7       &kp N8     &kp N9   &kp N0     &kp BACKSPACE
+&kp CAPSLOCK    &kp Q   &kp W   &kp E      &kp R         &kp T        &kp Y      &kp U        &kp I      &kp O    &kp P      &mt RIGHT_WIN DELETE
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F         &kp G        &kp H      &kp J        &kp K      &kp L    &kp SEMI   &kp APOS
+&kp LCTRL       &kp Z   &kp X   &kp C      &kp V         &kp B        &kp N      &kp M        &kp COMMA  &kp DOT  &kp SLASH  &mt RIGHT_SHIFT ENTER
+                                &kp SPACE  &mo 1         &mkp LCLK    &mo 2      &lt 3 SPACE
+                                           &kp LEFT_ALT  &mkp RCLK    &kp ENTER
             >;
 
             trackball-bindings = <&tmv_coarse>;
@@ -82,12 +124,12 @@
 
         Number {
             bindings = <
-&trans  &trans  &trans  &trans   &trans   &trans     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp F1  &kp F2   &kp F3   &kp F4     &kp N1  &kp N2  &kp N3  &trans  &trans  &trans
-&trans  &trans  &kp F5  &kp F6   &kp F7   &kp F8     &kp N4  &kp N5  &kp N6  &trans  &trans  &trans
-&trans  &trans  &kp F9  &kp F10  &kp F11  &kp F12    &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans
-                        &trans   &trans   &trans     &kp N0  &trans
-                                 &trans   &trans     &trans
+&trans  &psw    &gigaemail  &gmail   &yyz     &zyy       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp F1      &kp F2   &kp F3   &kp F4     &kp N1  &kp N2  &kp N3  &trans  &trans  &trans
+&trans  &trans  &kp F5      &kp F6   &kp F7   &kp F8     &kp N4  &kp N5  &kp N6  &trans  &trans  &trans
+&trans  &trans  &kp F9      &kp F10  &kp F11  &kp F12    &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans
+                            &trans   &trans   &trans     &kp N0  &trans
+                                     &trans   &trans     &trans
             >;
         };
 
@@ -99,6 +141,17 @@
 &trans  &trans  &trans  &trans    &trans    &trans       &kp PG_UP     &kp PG_DN     &trans         &trans  &trans  &trans
                         &trans    &trans    &trans       &trans        &trans
                                   &trans    &trans       &trans
+            >;
+        };
+
+        mouth {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+                                &trans  &trans    &trans
             >;
         };
     };
