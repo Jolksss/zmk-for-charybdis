@@ -35,7 +35,7 @@
 
         grave {
             bindings = <&kp GRAVE>;
-            key-positions = <1 2>;
+            key-positions = <1 0>;
         };
 
         backsplash {
@@ -61,11 +61,6 @@
         down {
             bindings = <&kp DOWN>;
             key-positions = <45 46>;
-        };
-
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <0 1>;
         };
     };
 
@@ -111,10 +106,10 @@
 
         Base {
             bindings = <
-&kp TAB         &kp N1  &kp N2  &kp N3     &kp N4        &kp N5       &kp N6     &kp N7       &kp N8     &kp N9   &kp N0     &kp BACKSPACE
-&kp CAPSLOCK    &kp Q   &kp W   &kp E      &kp R         &kp T        &kp Y      &kp U        &kp I      &kp O    &kp P      &mt RIGHT_WIN DELETE
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F         &kp G        &kp H      &kp J        &kp K      &kp L    &kp SEMI   &kp APOS
-&kp LCTRL       &kp Z   &kp X   &kp C      &kp V         &kp B        &kp N      &kp M        &kp COMMA  &kp DOT  &kp SLASH  &mt RIGHT_SHIFT ENTER
+&kp ESC         &kp N1  &kp N2  &kp N3     &kp N4        &kp N5       &kp N6     &kp N7       &kp N8     &kp N9   &kp N0     &kp BACKSPACE
+&kp TAB         &kp Q   &kp W   &kp E      &kp R         &kp T        &kp Y      &kp U        &kp I      &kp O    &kp P      &mt RIGHT_WIN DELETE
+&kp CAPS        &kp A   &kp S   &kp D      &kp F         &kp G        &kp H      &kp J        &kp K      &kp L    &kp SEMI   &kp APOS
+&kp LEFT_SHIFT  &kp Z   &kp X   &kp C      &kp V         &kp B        &kp N      &kp M        &kp COMMA  &kp DOT  &kp SLASH  &mt RIGHT_SHIFT ENTER
                                 &kp SPACE  &lt 1 LCTRL   &mkp LCLK    &kp ENTER  &lt 3 SPACE
                                            &kp LEFT_ALT  &mkp RCLK    &mo 2
             >;
@@ -135,11 +130,11 @@
 
         Arrow {
             bindings = <
-&trans  &trans  &trans    &trans    &trans     &trans    &trans   &trans    &trans     &trans  &trans  &trans
-&trans  &trans  &trans    &kp UP    &trans     &trans    &trans   &trans    &trans     &trans  &trans  &trans
-&trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &trans   &kp HOME  &kp PG_UP  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans     &trans    &kp DEL  &kp END   &kp PG_DN  &trans  &trans  &trans
-                          &trans    &trans     &trans    &trans   &trans
+&trans  &trans  &trans    &trans    &trans     &trans    &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans    &kp UP    &trans     &trans    &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &trans  &kp HOME   &kp END    &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans     &trans    &trans  &kp PG_UP  &kp PG_DN  &trans  &trans  &trans
+                          &trans    &trans     &trans    &trans  &trans
                                     &trans     &trans    &trans
             >;
         };
